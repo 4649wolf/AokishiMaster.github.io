@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="青騎士さんスイッチMASTER - 音声だけで遊ぶ神経衰弱ページ" />
+  <title>神経衰弱 | 青騎士さんスイッチMASTER</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="memory-body">
+  <header class="app-header memory-header">
+    <div class="header-inner memory-header-inner">
+      <div class="title-row" aria-label="サイト名">
+        <h1 class="site-title" data-title-jp="青騎士さんスイッチ" data-title-en="MASTER" aria-label="青騎士さんスイッチMASTER">青騎士さんスイッチMASTER</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="memory-page">
+    <section class="memory-card" aria-label="神経衰弱ゲーム">
+      <div class="memory-topbar">
+        <button class="control-btn memory-back-btn" type="button" id="memoryBackBtn">前画面に戻る</button>
+        <div class="memory-title-block">
+          <h2 class="memory-title" id="memoryTitle">神経衰弱</h2>
+          <p class="memory-subtitle" id="memorySubtitle">同じ音声を探してください</p>
+        </div>
+      </div>
+
+      <div class="memory-status" id="memoryStatus" aria-label="神経衰弱の進行状況">
+        <span>手数: <strong id="memoryMoves">0</strong></span>
+        <span>時間: <strong id="memoryTimer">00:00</strong></span>
+      </div>
+
+      <p class="memory-help">丸い音符ボタンを押すと音声が再生されます。同じ音声を2つ選ぶと、そのボタンが消えます。</p>
+      <div class="memory-grid" id="memoryGrid" aria-label="神経衰弱の音符ボタン一覧"></div>
+      <p class="memory-complete" id="memoryComplete" hidden>クリア！全部見つけました。</p>
+    </section>
+  </main>
+
+  <script src="assets/js/word-data.js"></script>
+  <script src="assets/js/logo.js"></script>
+  <script src="assets/js/memory-game.js"></script>
+</body>
+</html>

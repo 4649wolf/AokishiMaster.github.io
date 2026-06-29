@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="青騎士さんスイッチMASTER - かなボタンと単語ボタンで入力して発声するGitHub Pages用ページ" />
+  <title>青騎士さんスイッチMASTER</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="title-row" aria-label="サイト名">
+        <h1 class="site-title" data-title-jp="青騎士さんスイッチ" data-title-en="MASTER" aria-label="青騎士さんスイッチMASTER">青騎士さんスイッチMASTER</h1>
+      </div>
+
+      <div class="input-row" aria-label="固定入力欄">
+        <div class="input-display is-empty" id="inputDisplay">
+          <input class="input-field" id="inputText" type="text" readonly inputmode="none" autocomplete="off" aria-label="入力欄" placeholder="俺に喋らせたいことはあるか？" />
+        </div>
+      </div>
+
+      <div class="action-row" aria-label="入力操作とお気に入り">
+        <div class="header-actions" aria-label="入力操作">
+          <button class="control-btn delete-btn" type="button" id="deleteBtn">1文字削除</button>
+          <button class="control-btn clear-btn" type="button" id="clearBtn">全削除</button>
+          <button class="control-btn speak-btn" type="button" id="speakBtn">発声</button>
+        </div>
+
+        <div class="favorite-actions" aria-label="お気に入り操作">
+          <button class="control-btn favorite-add-btn icon-control-btn" type="button" id="favoriteAddBtn" aria-label="お気に入りに追加" title="お気に入りに追加"><span aria-hidden="true">＋</span></button>
+          <button class="control-btn favorite-list-btn icon-control-btn round-control-btn" type="button" id="favoriteListBtn" aria-label="お気に入り一覧" title="お気に入り一覧"><span aria-hidden="true">♥</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="favorite-modal" id="favoriteModal" hidden>
+    <div class="favorite-backdrop" data-favorite-close></div>
+    <section class="favorite-dialog" role="dialog" aria-modal="true" aria-labelledby="favoriteDialogTitle">
+      <div class="favorite-dialog-head">
+        <div>
+          <p class="favorite-kicker">FAVORITE</p>
+          <h2 class="favorite-dialog-title" id="favoriteDialogTitle">お気に入り一覧</h2>
+        </div>
+        <button class="control-btn favorite-close-btn icon-control-btn" type="button" id="favoriteCloseBtn" aria-label="お気に入り一覧を閉じる"><span aria-hidden="true">×</span></button>
+      </div>
+      <p class="favorite-help">保存した文章を「発声」または「読込」できます。</p>
+      <div class="favorite-list" id="favoriteList"></div>
+      <p class="favorite-empty" id="favoriteEmpty" hidden>まだお気に入りはありません。文章を作って「＋」を押すと保存できます。</p>
+      <div class="favorite-dialog-foot">
+        <button class="control-btn favorite-clear-btn" type="button" id="favoriteClearBtn">全削除</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+
+  <main class="page">
+    <div class="stage-shell" aria-label="かなボタンと単語ボタンの横並びレイアウト">
+      <div class="stage">
+        <div class="board">
+          <section class="panel" aria-label="かな単音ボタン">
+            <div class="kana-groups" id="kanaGroups"></div>
+          </section>
+
+          <aside class="panel" aria-label="単語ボタン">
+            <div class="word-panel-inner">
+              <div class="word-stack" id="wordButtons" aria-label="単語ボタン一覧"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/kana-data.js"></script>
+  <script src="assets/js/word-data.js"></script>
+  <script src="assets/js/input-buffer.js"></script>
+  <script src="assets/js/audio-player.js"></script>
+  <script src="assets/js/logo.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
