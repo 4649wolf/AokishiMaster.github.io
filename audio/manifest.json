@@ -1,0 +1,55 @@
+{
+  "note": "GitHub Webアップロードの100ファイル制限に当たりにくいよう、音声は assets から分離して audio/ 配下に置いています。単語音声は用途別に random / single / special へ分割しています。",
+  "kanaBase": "audio/kana",
+  "wordBase": "audio/words",
+  "wordFolders": [
+    "random",
+    "single",
+    "special"
+  ],
+  "wordExamples": {
+    "random": [
+      "lol1.mp3",
+      "an1.mp3",
+      "pig1.mp3"
+    ],
+    "single": [
+      "iiyo.mp3",
+      "unyon.mp3",
+      "sukkirisita.mp3"
+    ],
+    "special": [
+      "word-d-001.mp3",
+      "word-d-002.mp3"
+    ]
+  },
+  "kanaFolders": [
+    "seion",
+    "dakuon",
+    "handakuon",
+    "small"
+  ],
+  "recommendedPublicFormat": "mp3",
+  "smallKanaGenerated": {
+    "ぁ": "audio/kana/small/small-a.mp3",
+    "ぃ": "audio/kana/small/small-i.mp3",
+    "ぅ": "audio/kana/small/small-u.mp3",
+    "ぇ": "audio/kana/small/small-e.mp3",
+    "ぉ": "audio/kana/small/small-o.mp3",
+    "ゃ": "audio/kana/small/small-ya.mp3",
+    "ゅ": "audio/kana/small/small-yu.mp3",
+    "ょ": "audio/kana/small/small-yo.mp3"
+  },
+  "programmaticKanaRules": {
+    "っ": "pause:120ms",
+    "、": "pause:280ms",
+    "。": "pause:520ms",
+    "ー": "repeat-previous-vowel"
+  },
+  "memoryGames": {
+    "laugh": "memory.html?game=laugh / 笑う9種類",
+    "anoo": "memory.html?game=anoo / あん5種類 + おぉ3種類"
+  },
+  "optimizedFrom": "optimized-v9",
+  "structureVersion": "github-pages-split-audio-v1"
+}
